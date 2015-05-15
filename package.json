@@ -1,0 +1,14 @@
+{
+  "jspm": {
+    "directories": {
+      "lib": ".",
+      "packages": "jspm_packages"
+    },
+    "dependencies": {
+      "immutable": "npm:immutable@^3.7.2",
+      "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
+      "lodash-node": "npm:lodash-node@^3.8.0",
+      "react": "npm:react@^0.13.3"
+    }
+  }
+}
