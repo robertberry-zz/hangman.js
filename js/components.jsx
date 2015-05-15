@@ -1,5 +1,6 @@
 import React from 'react';
 import contains from 'lodash-node/modern/collection/contains';
+import filter from 'lodash-node/modern/collection/filter';
 import map from 'lodash-node/modern/collection/map';
 import take from 'lodash-node/modern/array/take';
 
@@ -89,15 +90,7 @@ export class Hangman extends React.Component {
     }
 
     incorrectGuesses() {
-        let i, n = 0;
-
-        for (i = 0; i < this.state.guesses.length; ++i) {
-            if (!contains(this.props.answer, this.state.guesses[i])) {
-                n += 1;
-            }
-        }
-
-        return n;
+        return filter(this.state.guesses, (letter) => !contains(this.props.answer, letter)).length;
     }
 
     hasBeenUsed(letter) {
