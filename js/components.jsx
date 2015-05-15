@@ -83,14 +83,6 @@ export class Hangman extends React.Component {
         };
     }
 
-    componentDidMount() {
-
-    }
-
-    componentWillUnmount() {
-
-    }
-
     guess(letter) {
         this.state.guesses.push(letter);
         this.forceUpdate();
